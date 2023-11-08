@@ -1,2 +1,8 @@
-# ParseOrFail
-Group project for CS 4450
+# Parser Project
+Group Name: Parse or Fail
+Language: Java
+Group Members:
+    Aidan Puricelli
+    Clay Billadeau
+    Ethan Mick
+    Shakthivel Gnanasekaran
