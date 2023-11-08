@@ -1,3 +1,3 @@
 ## Deliverable #1
-    - Arithmetic operators (+,-,*,/,%)
-    - Assignment operators (=,+=,-=,*=,/=)
+    - Arithmetic operators (+, -, *, /, %)
+    - Assignment operators (=, +=, -=, *=, /=)
