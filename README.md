@@ -8,3 +8,9 @@
     Clay Billadeau
     Ethan Mick
     Shakthivel Gnanasekaran
+### Parser Requirements:
+    TBD
+### How To Use/Run Our Parser:
+    TBD
+### Demo Video:
+    TBD
