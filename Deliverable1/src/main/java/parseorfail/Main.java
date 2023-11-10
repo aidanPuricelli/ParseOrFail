@@ -26,10 +26,23 @@ public class Main {
             // parse the input and print the parse tree
             ParseTree tree = parser.program();
             System.out.println("Parse tree:");
-            System.out.println(tree.toStringTree(parser));   
+            printTree(tree, parser,0);
+            //System.out.println(tree.toStringTree(parser));  (string output that we originally had)
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    // making the parse tree all pretty and stuff
+    private static void printTree(ParseTree tree, Parser parser, int indent) {
+        String nodeText = tree instanceof TerminalNode
+                ? tree.getText()
+                : parser.getRuleNames()[((RuleContext) tree).getRuleIndex()];
+        System.out.println(" ".repeat(indent * 2) + nodeText);
+
+        for (int i = 0; i < tree.getChildCount(); i++) {
+            printTree(tree.getChild(i), parser, indent + 1);
         }
     }
 }
