@@ -1,0 +1,99 @@
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.ParserRuleContext;
+
+
+public class Deliverable2Runner {
+    public static void main(String[] args) throws Exception {
+        String[] testCases = {
+            "assign1 = \"20\"",
+            "assign2 = 123",
+            "assign3 = 1.23",
+            "assign4 = assign1",
+
+            "arith_op1 = 1 + 2",
+            "arith_op2 = 13 - 3",
+            "arith_op3 = 10 / arith_op1",
+            "arith_op4 = 4.2 * 10",
+            "arith_op5 = arith_op1 % arith_op2",
+
+            "arith_op1 += arith_op2",
+            "arith_op2 -= arith_op3",
+            "arith_op3 *= arith_op4",
+            "arith_op4 /= arith_op5",
+
+            "array1 = [1, 2, 3, 4, 5]",
+            "array2 = ['a', 'b', 'c']",
+            "array3 = [1.6, 2.7, 3.8, 4.9, 5.0]",
+
+            "var1 = 10",
+            "var2 = var1/2 + 5",
+            "var3 = var2 % 2",
+            "var4 = 1",
+
+            "flag = True",
+
+            "assign1 = \"\"",
+
+            "if var1 > var2:",
+            "    arith_op1 = 1 + 2",
+            "    assign1 = \"text data\"",
+
+            "if var1 <= var2 and var3 == var4:",
+            "    arith_op1 = 1 + 2",
+            "    assign1 = \"text data\"",
+            "else:",
+            "    arith_op4 = 4.2 * 10",
+            "    arith_op3 *= arith_op4",
+
+            "data = 0",
+
+            "if var1 != var2 or var3 >= var4:",
+            "    flag = True",
+            "elif (not flag) and var3 > 10:",
+            "    flag = False",
+            "else:",
+            "    data = -1"
+        };
+
+        for (String testCase : testCases) {
+            // Create an input stream from the test case
+            CharStream input = CharStreams.fromString(testCase);
+
+            // Create a lexer that feeds off of input
+            Deliverable2Lexer lexer = new Deliverable2Lexer(input);
+
+            // Create a buffer of tokens pulled from the lexer
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+
+            // Create a parser that feeds off the tokens buffer
+            Deliverable2Parser parser = new Deliverable2Parser(tokens);
+
+            // Begin parsing at rule 'parse', which is the top-level rule
+            ParseTree tree = parser.program();
+
+            // Print the parse tree (for debugging purposes)
+            System.out.println(tree.toStringTree(parser));
+
+            // Create a listener to print information during the parsing process
+            Deliverable2BaseListener listener = new Deliverable2BaseListener() {
+                @Override
+                public void enterEveryRule(ParserRuleContext ctx) {
+                    System.out.println("Entering " + ctx.getClass().getSimpleName() + ": " + ctx.getText());
+                }
+
+                @Override
+                public void exitEveryRule(ParserRuleContext ctx) {
+                    System.out.println("Exiting " + ctx.getClass().getSimpleName() + ": " + ctx.getText());
+                }
+            };
+
+            // Use the listener to walk the parse tree
+            ParseTreeWalker.DEFAULT.walk(listener, tree);
+        }
+    }
+}
