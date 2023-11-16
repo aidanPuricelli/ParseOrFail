@@ -2,17 +2,16 @@ grammar Deliverable2;
 
 // Parser Rules
 program
-    : (NEWLINE)* (statement NEWLINE)* statement? EOF ;
+    : (NEWLINE)* (statement NEWLINE)* statement? EOF;
 
 statement
     : assignment
-    | expr
     | ifStatement
+    | expr
     ;
 
 assignment
-    : ID (ASSIGN | compoundAssign) expr
-    ;
+    : ID (ASSIGN | compoundAssign) expr;
 
 expr
     : expr ('*' | '/' | '%' | '+' | '-') expr
@@ -22,17 +21,19 @@ expr
     | NUMBER
     | STRING
     | CHAR
-    | '[' elements ']'
+    | array
     | '(' expr ')'
     | BOOLEAN
     ;
 
+array
+    : '[' elements? ']';
+
 elements
-    : expr (',' expr)*
-    ;
+    : expr (',' expr)*;
 
 ifStatement
-    : 'if' expr ':' block (elifBlock)* (elseBlock)?
+    : 'if' expr ':' block (elifBlock)* elseBlock?
     ;
 
 elifBlock
@@ -44,15 +45,13 @@ elseBlock
     ;
 
 block
-    : (INDENT statement)+ DEDENT
-    ;
+    : (NEWLINE INDENT statement+ DEDENT) | statement;
 
 compoundAssign
     : '+='
     | '-='
     | '*='
-    | '/='
-    ;
+    | '/=';
 
 comparisonOperator
     : '<'
@@ -60,14 +59,12 @@ comparisonOperator
     | '>'
     | '>='
     | '=='
-    | '!='
-    ;
+    | '!=';
 
 booleanOperator
     : 'and'
     | 'or'
-    | 'not'
-    ;
+    | 'not';
 
 // Lexer Rules
 ASSIGN : '=';

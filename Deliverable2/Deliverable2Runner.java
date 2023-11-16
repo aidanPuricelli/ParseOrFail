@@ -73,6 +73,21 @@ public class Deliverable2Runner {
             // Print the parse tree (for debugging purposes)
             System.out.println(tree.toStringTree(parser));
 
+            // Create a listener to print information during the parsing process
+            //Deliverable2BaseListener listener = new Deliverable2BaseListener() {
+                //@Override
+                //public void enterEveryRule(ParserRuleContext ctx) {
+                    //System.out.println("Entering " + ctx.getClass().getSimpleName() + ": " + ctx.getText());
+                //}
+
+                //@Override
+                //public void exitEveryRule(ParserRuleContext ctx) {
+                    //System.out.println("Exiting " + ctx.getClass().getSimpleName() + ": " + ctx.getText());
+                //}
+            //};
+
+            // Use the listener to walk the parse tree
+            //ParseTreeWalker.DEFAULT.walk(listener, tree);
         }
     }
 }
