@@ -11,6 +11,6 @@
 ### Parser Requirements:
     TBD
 ### How To Use/Run Our Parser:
-    TBD
-### Demo Video:
-    TBD
+    Directions for testing each deliverable are detailed in the README.md file of each Deliverable folder
+### Demo Video
+    
