@@ -1,0 +1,806 @@
+program
+  variable
+    assign1
+     
+    assignmentExpression
+      =
+       
+      "20"
+      
+
+  variable
+    assign2
+     
+    assignmentExpression
+      =
+       
+      123
+      
+
+  variable
+    assign3
+     
+    assignmentExpression
+      =
+       
+      1.23
+      
+
+  variable
+    assign4
+     
+    assignmentExpression
+      =
+       
+      variable
+        assign1
+        
+
+
+  variable
+    arith_op1
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        1
+         
+        +
+         
+        2
+      
+
+  variable
+    arith_op2
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        13
+         
+        -
+         
+        3
+      
+
+  variable
+    arith_op3
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        10
+         
+        /
+         
+        variable
+          arith_op1
+          
+
+  # Deliverable 1
+
+  variable
+    arith_op4
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        4.2
+         
+        *
+         
+        10
+      
+
+  variable
+    arith_op5
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        variable
+          arith_op1
+           
+        %
+         
+        variable
+          arith_op2
+          
+
+
+  variable
+    arith_op1
+     
+    assignmentExpression
+      +
+      =
+       
+      variable
+        arith_op2
+        
+
+  variable
+    arith_op2
+     
+    assignmentExpression
+      -
+      =
+       
+      variable
+        arith_op3
+        
+
+  variable
+    arith_op3
+     
+    assignmentExpression
+      *
+      =
+       
+      variable
+        arith_op4
+        
+
+  variable
+    arith_op4
+     
+    assignmentExpression
+      /
+      =
+       
+      variable
+        arith_op5
+        
+
+
+  variable
+    array1
+     
+    assignmentExpression
+      =
+       
+      [1, 2, 3, 4, 5]
+      
+
+  variable
+    array2
+     
+    assignmentExpression
+      =
+       
+      ['a', 'b', 'c']
+      
+
+  variable
+    array3
+     
+    assignmentExpression
+      =
+       
+      [1.6, 2.7, 3.8, 4.9, 5.0]
+      
+
+
+  variable
+    var1
+     
+    assignmentExpression
+      =
+       
+      10
+      
+
+  variable
+    var2
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        variable
+          var1
+        /
+        2
+         
+        +
+         
+        5
+      
+
+  variable
+    var3
+     
+    assignmentExpression
+      =
+       
+      arithmeticExpression
+        variable
+          var2
+           
+        %
+         
+        2
+      
+
+  variable
+    var4
+     
+    assignmentExpression
+      =
+       
+      1
+      
+
+
+  variable
+    flag
+     
+    assignmentExpression
+      =
+       
+      True
+      
+
+
+  variable
+    assign1
+     
+    assignmentExpression
+      =
+       
+      ""
+      
+
+
+  # Deliverable 2
+
+
+  controlStructure
+    if
+     
+    logicalExpression
+      variable
+        var1
+         
+      comparisonOperator
+        >
+      logicalExpression
+         
+        variable
+          var2
+    :
+    
+
+    	
+    block
+      variable
+        arith_op1
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            1
+             
+            +
+             
+            2
+          
+
+    	
+    block
+      variable
+        assign1
+         
+        assignmentExpression
+          =
+           
+          "text data"
+          
+
+
+  controlStructure
+    if
+     
+    logicalExpression
+      variable
+        var1
+         
+      comparisonOperator
+        <=
+      logicalExpression
+         
+        variable
+          var2
+           
+        and
+         
+        logicalExpression
+          variable
+            var3
+             
+          comparisonOperator
+            ==
+          logicalExpression
+             
+            variable
+              var4
+    :
+    
+
+    	
+    block
+      variable
+        arith_op1
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            1
+             
+            +
+             
+            2
+          
+
+    	
+    block
+      variable
+        assign1
+         
+        assignmentExpression
+          =
+           
+          "text data"
+          
+
+  controlStructure
+    else
+    :
+    
+
+    	
+    block
+      variable
+        arith_op4
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            4.2
+             
+            *
+             
+            10
+          
+
+    	
+    block
+      variable
+        arith_op3
+         
+        assignmentExpression
+          *
+          =
+           
+          variable
+            arith_op4
+            
+
+    	
+    block
+      
+
+  variable
+    data
+     
+    assignmentExpression
+      =
+       
+      0
+      
+
+
+  controlStructure
+    if
+     
+    logicalExpression
+      variable
+        var1
+         
+      comparisonOperator
+        !=
+      logicalExpression
+         
+        variable
+          var2
+           
+        or
+         
+        logicalExpression
+          variable
+            var3
+             
+          comparisonOperator
+            >=
+          logicalExpression
+             
+            variable
+              var4
+    :
+    
+
+    	
+    block
+      variable
+        flag
+         
+        assignmentExpression
+          =
+           
+          True
+          
+
+  controlStructure
+    elif
+     
+    logicalExpression
+      (
+      logicalExpression
+        not
+         
+        variable
+          flag
+      )
+       
+      and
+       
+      logicalExpression
+        variable
+          var3
+           
+        comparisonOperator
+          >
+        logicalExpression
+           
+          10
+    :
+    
+
+    	
+    block
+      variable
+        flag
+         
+        assignmentExpression
+          =
+           
+          False
+          
+
+  controlStructure
+    else
+    :
+    
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          -1
+          
+
+
+  # Deliverable 3
+
+
+  ## comment test 1
+
+
+  ''' 
+	comment test 2
+	adding more comments
+	and more...
+'''
+
+
+  controlStructure
+    while
+     
+    logicalExpression
+      variable
+        data
+         
+      comparisonOperator
+        >
+      logicalExpression
+         
+        0
+         
+        or
+         
+        logicalExpression
+          variable
+            data
+             
+          comparisonOperator
+            !=
+          logicalExpression
+             
+            0
+    :
+    
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            variable
+              data
+               
+            -
+             
+            1
+          
+
+    	
+    block
+      controlStructure
+        if
+         
+        logicalExpression
+          True
+        :
+        
+
+        		
+        block
+          variable
+            a
+             
+            assignmentExpression
+              =
+               
+              "This is the weirdest code I have ever written"
+              
+
+
+  controlStructure
+    for
+     
+    data
+     
+    in
+     
+    array1
+    :
+    
+
+    	
+    block
+      controlStructure
+        if
+         
+        logicalExpression
+          variable
+            data
+             
+          comparisonOperator
+            <
+          logicalExpression
+             
+            0
+        :
+        
+
+        		
+        block
+          controlStructure
+            while
+            logicalExpression
+              (
+              logicalExpression
+                variable
+                  data
+                   
+                comparisonOperator
+                  !=
+                logicalExpression
+                   
+                  0
+              )
+            :
+            
+
+            			
+            block
+              variable
+                b
+                 
+                assignmentExpression
+                  =
+                   
+                  "This code doesn't make any sense"
+                  
+
+            			
+            block
+              variable
+                data
+                 
+                assignmentExpression
+                  =
+                   
+                  arithmeticExpression
+                    variable
+                      data
+                       
+                    +
+                     
+                    1
+                  
+
+            	
+            block
+              controlStructure
+                elif
+                 
+                logicalExpression
+                  variable
+                    data
+                     
+                  comparisonOperator
+                    >
+                  logicalExpression
+                     
+                    0
+                :
+                
+
+                		
+                block
+                  controlStructure
+                    while
+                    logicalExpression
+                      (
+                      logicalExpression
+                        variable
+                          data
+                           
+                        comparisonOperator
+                          !=
+                        logicalExpression
+                           
+                          0
+                      )
+                    :
+                    
+
+                    			
+                    block
+                      variable
+                        c
+                         
+                        assignmentExpression
+                          =
+                           
+                          "I feel like I have no purpose..."
+                          
+
+                    			
+                    block
+                      variable
+                        data
+                         
+                        assignmentExpression
+                          =
+                           
+                          arithmeticExpression
+                            variable
+                              data
+                               
+                            -
+                             
+                            1
+                          
+
+
+  controlStructure
+    for
+     
+    i
+     
+    in
+     
+    range(0,5)
+    :
+    
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            variable
+              data
+               
+            *
+             
+            2
+          
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            variable
+              data
+               
+            -
+             
+            1
+          
+
+
+  ''' I need help, this code shouldn't even exist '''
+
+  controlStructure
+    while
+     
+    logicalExpression
+      True
+    :
+    
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          30
+          
+
+    	
+    block
+      variable
+        data
+         
+        assignmentExpression
+          =
+           
+          arithmeticExpression
+            variable
+              data
+               
+            -
+             
+            1
+  <EOF>
