@@ -2,5 +2,5 @@
     - Arithmetic operators (+, -, *, /, %)
     - Assignment operators (=, +=, -=, *=, /=)
 
-## Running
-    - Java DeliverableOneRunner
+## Testing
+    - java -cp antlr-4.13.1-complete.jar:. Deliverable2Runner.java
