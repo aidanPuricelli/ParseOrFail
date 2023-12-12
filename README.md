@@ -11,6 +11,7 @@
 ### Parser Requirements:
     - Make sure you have the latest version of ANTLR4 installed (4.13.1)
     - Download/clone our repo
+    - Make sure the code you download/clone is from the csb6bz-parsing branch
     - Navigate to the folder of the deliverable you want to test
     - Follow the instructions in the README.md file of each deliverable to run and test each deliverable
 ### How To Use/Run Our Parser:
