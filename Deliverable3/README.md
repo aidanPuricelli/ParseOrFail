@@ -4,5 +4,5 @@
     - Support for comments
 
 ### Testing
-    - java -cp antlr-4.13.1-complete.jar:. Deliverable3Runner.java
-    - Parse tree gets written to parse_tree.txt
+    java -cp antlr-4.13.1-complete.jar:. Deliverable3Runner.java
+    Parse tree gets written to parse_tree.txt
